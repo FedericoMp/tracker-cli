@@ -163,5 +163,16 @@ program
 
 // -------------------------------------------------------------------
 
+program.on('--help', function(){
+  console.log('\n  To test on local:');
+  console.log('    node commands.js new-dev');
+  console.log('    node commands.js n-dev');
+  console.log('');
+  console.log('  To test out local:');
+  console.log('    tracker new-dev');
+  console.log('    tracker n-dev');
+  console.log('');
+});
+
 // The process.argv property returns an array containing the command line arguments passed when the Node.js process was launched
 program.parse(process.argv);
