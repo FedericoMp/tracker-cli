@@ -26,7 +26,23 @@ const devData = [
     {
         type: 'input',
         name: 'devName',
-        message: 'Developer name: '
+        message: 'Developer name: ',
+        validate: function (devName) {
+                    // Declare function as asynchronous, and save the done callback
+                    var done = this.async();
+                 
+                    // Do async stuff
+                    setTimeout(function() {
+                      // is Not a Number to check  
+                      if (isNaN(devName) == false || devName == '') {
+                        // Pass the return value in the done callback
+                        done('You need to provide a name');
+                        return;
+                      }
+                      // Pass the return value in the done callback
+                      done(null, true);
+                    }, 3000);
+                  }
     }
 ];
 
