@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Tracker time project management CLI",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./commands.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +13,7 @@
     "url": "https://github.com/FedericoMp/tracker-cli.git"
   },
   "author": "Federico Perez",
-  "license": "ISC",
+  "license": "ISC, MIT",
   "bugs": {
     "url": "https://github.com/FedericoMp/tracker-cli.git/issues"
   },
